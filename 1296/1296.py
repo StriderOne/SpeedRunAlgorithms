@@ -1,10 +1,11 @@
 max_ = 0
 s = 0
-for _ in range(int(input())):
+n = int(input())
+for i in range(n):
     a = int(input())
-    if s + a > 0:
+    if s + a <= 0:
+        s = 0
+    else:
         s += a
         max_ = max(max_, s)
-    else:
-        s = 0
 print(max_)
